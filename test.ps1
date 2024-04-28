@@ -173,7 +173,7 @@ function Invoke-MalDoc {
     Set-ItemProperty -Path $Key -Name 'AccessVBOM' -Value 1
 
     if (-not $noWrap) {
-        $macroCode = "Sub $sub()`n" + $injectMacro + "`nEnd Sub"
+        $macroCode = $injectMacro
     }
 
     if ($officeProduct -eq "Word") {
